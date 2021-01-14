@@ -1,8 +1,14 @@
 # Setup
-## Install [Eclipse](https://www.eclipse.org/downloads/)
+
+## Install [GitHub Desktop](https://desktop.github.com/)
+1. download and execut the installer from [here](https://desktop.github.com/)
+
+2. Log in to your GitHub Account
+
+## Install [Eclipse](https://www.eclipse.org/)
 
 **DO THIS EVEN IF YOU ALREADY HAVE AN ECLIPSE INSTALLATION**
-1. download and execute the installer
+1. download and execute the installer from [here](https://www.eclipse.org/downloads/)
 
 2. Select "Eclipse IDE for Enterprise Java Developers"
 
@@ -28,7 +34,9 @@
 
 3. Hit Install on the "GWT Eclipse Plugin 3.0.0"
 
-   (Make sure that the Eclipse Marketplace is Selected)![Screenshot of Int](./1.jpg)
+   (Make sure that the Eclipse Marketplace is Selected)
+   
+   ![Screenshot of Int](./1.jpg)
 
 4. Hit Confirm
 
@@ -56,4 +64,8 @@ Skip this if you already have a Java 8 JDK installed
 
     [Screenshot of Preferences Window](./2.JPG)
 
+5. In the Preferences Window select Java &rarr; Compiler
 
+6. Set Compiler compliance level to 1.8
+
+    [Screenshot of Preferences Window](./3.JPG)
