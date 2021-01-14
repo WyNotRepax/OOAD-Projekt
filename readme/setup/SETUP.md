@@ -1,9 +1,11 @@
 # Setup
 
 ## Install [GitHub Desktop](https://desktop.github.com/)
-1. download and execut the installer from [here](https://desktop.github.com/)
+1. Download and execute the installer from [here](https://desktop.github.com/)
 
 2. Log in to your GitHub Account
+
+3. Select Clone Repository
 
 ## Install [Eclipse](https://www.eclipse.org/)
 
