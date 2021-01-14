@@ -1,0 +1,3 @@
+# Module testprojekt
+# RPC service class, partial path of RPC policy file
+de.bsteinka.testprojekt.client.GreetingService, AF48938BE222B21F61F2648F6935E999.gwt.rpc

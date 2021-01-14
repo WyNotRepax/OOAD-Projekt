@@ -1,0 +1,2 @@
+serviceClass: de.bsteinka.testprojekt.client.GreetingService
+path: AF48938BE222B21F61F2648F6935E999.gwt.rpc
