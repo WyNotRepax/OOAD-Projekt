@@ -4,3 +4,5 @@
   *  [Javadoc](http://www.gwtproject.org/javadoc/latest/)
 * Ant
   * [Apache Ant](http://ant.apache.org/)
+
+[Setup](readme/setup/SETUP.md)
