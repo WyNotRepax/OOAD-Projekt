@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="akkuvita" default="build" basedir=".">
+  <!-- Arguments to gwtc and devmode targets -->
+  <property name="gwt.args" value="" />
+
+  <!-- Configure path to GWT SDK -->
+  <property name="gwt.sdk" location="../gwt-2.9.0" />
+  <property name="libdir" location="./lib"/>
+
+  <property name="db.jar" location="${libdir}/hsqldb.jar"/>
+  <property name="db.dir" location="./db"/>
+  <property name="db.alias" value="akkuvitadb"/>
+
+  <path id="project.class.path">
+    <pathelement location="war/WEB-INF/classes"/>
+    <pathelement location="${gwt.sdk}/gwt-user.jar"/>
+    <pathelement location="${gwt.sdk}/gwt-dev.jar"/>
+    <pathelement location="${gwt.sdk}/validation-api-1.0.0.GA.jar"/>
+    <pathelement location="${gwt.sdk}/validation-api-1.0.0.GA-sources.jar"/>
+    <fileset dir="war/WEB-INF/lib" includes="**/*.jar"/>
+    <!-- Add any additional non-server libs (such as JUnit) here -->
+  </path>
+
+  <target name="libs" description="Copy libs to WEB-INF/lib">
+    <mkdir dir="war/WEB-INF/lib" />
+    <copy todir="war/WEB-INF/lib" file="${gwt.sdk}/gwt-servlet.jar" />
+    <copy todir="war/WEB-INF/lib" file="${gwt.sdk}/gwt-servlet-deps.jar" />
+    <!-- Add any additional server libs that need to be copied -->
+  </target>
+
+  <target name="javac" depends="libs" description="Compile java source to bytecode">
+    <mkdir dir="war/WEB-INF/classes"/>
+    <javac srcdir="src" includes="**" encoding="utf-8"
+        destdir="war/WEB-INF/classes"
+        source="1.7" target="1.7" nowarn="true"
+        debug="true" debuglevel="lines,vars,source">
+      <classpath refid="project.class.path"/>
+    </javac>
+    <copy todir="war/WEB-INF/classes">
+      <fileset dir="src" excludes="**/*.java"/>
+    </copy>
+  </target>
+
+  <target name="gwtc" depends="javac" description="GWT compile to JavaScript (production mode)">
+    <java failonerror="true" fork="true" classname="com.google.gwt.dev.Compiler" maxmemory="512m">
+      <classpath>
+        <pathelement location="src"/>
+        <path refid="project.class.path"/>
+      </classpath>
+      <arg line="-war"/>
+      <arg value="war"/>
+      <!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
+      <arg line="${gwt.args}"/>
+      <arg value="de.tempmodulename.akkuvita"/>
+    </java>
+  </target>
+
+  <target name="devmode" depends="javac" description="Run development mode (pass -Dgwt.args=-nosuperDevMode to fallback to classic DevMode)">
+    <java failonerror="true" fork="true" classname="com.google.gwt.dev.DevMode" maxmemory="1g">
+      <classpath>
+        <pathelement location="src"/>
+        <path refid="project.class.path"/>
+        <pathelement location="${gwt.sdk}/gwt-codeserver.jar"/>
+      </classpath>
+      <arg value="-startupUrl"/>
+      <arg value="akkuvita.html"/>
+      <arg line="-war"/>
+      <arg value="war"/>
+      <!-- Additional arguments like -style PRETTY, -logLevel DEBUG or -nosuperDevMode -->
+      <arg line="${gwt.args}"/>
+      <arg value="de.tempmodulename.akkuvita"/>
+      <arg value="de.tempmodulename.akkuvita"/>
+    </java>
+  </target>
+
+  <target name="build" depends="gwtc" description="Build this project" />
+
+  <target name="war" depends="build" description="Create a war file">
+    <zip destfile="akkuvita.war" basedir="war"/>
+  </target>
+
+  <target name="clean" description="Cleans this project">
+    <delete dir="war/WEB-INF/classes" failonerror="false" />
+    <delete dir="war/akkuvita" failonerror="false" />
+    <delete dir="db"/>
+  </target>
+
+  <target name="db" description="Starts HSQLDB Server">
+    <mkdir dir="${db.dir}"/>
+    <java failonerror="true" fork="true" classname="org.hsqldb.server.Server" dir="${db.dir}">
+      <classpath>
+        <pathelement location="${db.jar}"/>
+      </classpath>
+      <arg value="--database.0"/>
+      <arg value="--dbname.0 ${db.alias}"/>
+    </java>
+  </target>
+
+</project>
