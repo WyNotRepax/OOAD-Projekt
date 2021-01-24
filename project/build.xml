@@ -9,7 +9,6 @@
 
   <property name="db.jar" location="${libdir}/hsqldb.jar"/>
   <property name="db.dir" location="./db"/>
-  <property name="db.alias" value="akkuvitadb"/>
 
   <path id="project.class.path">
     <pathelement location="war/WEB-INF/classes"/>
@@ -82,7 +81,8 @@
   <target name="clean" description="Cleans this project">
     <delete dir="war/WEB-INF/classes" failonerror="false" />
     <delete dir="war/akkuvita" failonerror="false" />
-    <delete dir="db"/>
+    <delete dir="${db.dir}/data"/>
+    <delete dir="gwt-unitCache"/>
   </target>
 
   <target name="db" description="Starts HSQLDB Server">
@@ -91,8 +91,6 @@
       <classpath>
         <pathelement location="${db.jar}"/>
       </classpath>
-      <arg value="--database.0"/>
-      <arg value="--dbname.0 ${db.alias}"/>
     </java>
   </target>
 
