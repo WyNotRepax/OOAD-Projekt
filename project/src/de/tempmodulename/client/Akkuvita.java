@@ -24,6 +24,7 @@ public class Akkuvita implements EntryPoint {
         tabPanel.setWidth("100%");
 
         addFilteredSearchPanel(tabPanel);
+        addFilteredSearchPanel(tabPanel);
 
         tabPanel.selectTab(0);
 

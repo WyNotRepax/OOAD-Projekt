@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>36</x>
+      <y>342</y>
+      <w>126</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+Kunde
+--
+-kundennummer: int
+-name: string
+-firma: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>657</x>
+      <y>270</y>
+      <w>153</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+Akku
+-
+-seriennummer: string
+-produktionsdatum: Date
+-status
+-reparaturanzahl:int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>270</y>
+      <w>90</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+Event
+-
+#datum: Date</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>342</y>
+      <w>117</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+PruefungsEvent
+-
+-notiz: string
+-kapazität: float
+-ticketnummer: int
+-ladezyklen: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>306</y>
+      <w>162</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=-events
+m1=*
+r2=-akku
+m2=1</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>153</x>
+      <y>369</y>
+      <w>171</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r2=-kunde
+m2=1
+r1=-events
+m1=*</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>324</y>
+      <w>81</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;70.0;70.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>504</y>
+      <w>153</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+ReparaturEingangsEvent
+-
+-notiz: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>261</x>
+      <y>576</y>
+      <w>162</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+ReparaturAusgangsEvent
+-
+-notiz: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>648</y>
+      <w>135</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;entity&gt;&gt;
+AusmusterungsEvent
+-
+-notiz: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>36</x>
+      <y>450</y>
+      <w>108</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;enumeration&gt;&gt;
+Defekt</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>135</x>
+      <y>441</y>
+      <w>243</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;250.0;30.0;250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>324</y>
+      <w>81</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;70.0;250.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>324</y>
+      <w>81</w>
+      <h>387</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;70.0;410.0;10.0;410.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>324</y>
+      <w>81</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;70.0;330.0;10.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1026</x>
+      <y>270</y>
+      <w>117</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;interface&gt;&gt;
+AkkuVitaService</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1017</x>
+      <y>540</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;class&gt;&gt;
+AkkuVitaServiceImpl</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>306</y>
+      <w>27</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>0</x>
+      <y>162</y>
+      <w>828</w>
+      <h>585</h>
+    </coordinates>
+    <panel_attributes>data
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>945</x>
+      <y>414</y>
+      <w>279</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>Server
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>945</x>
+      <y>72</y>
+      <w>279</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>Client
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1026</x>
+      <y>135</y>
+      <w>117</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+AkkuVita
+-
++onModuleLoad()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1359</x>
+      <y>135</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>EntryPoint</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1134</x>
+      <y>135</y>
+      <w>243</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>180</y>
+      <w>27</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>279</y>
+      <w>225</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>549</y>
+      <w>216</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;220.0;10.0</additional_attributes>
+  </element>
+</diagram>
