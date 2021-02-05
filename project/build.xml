@@ -5,9 +5,10 @@
 
   <!-- Configure path to GWT SDK -->
   <property name="gwt.sdk" location="../gwt-2.9.0" />
-  <property name="libdir" location="./lib"/>
+  <property name="lib.in" location="./lib"/>
+  <property name="lib.out" location="./war/WEB-INF/lib"/>
 
-  <property name="db.jar" location="${libdir}/hsqldb.jar"/>
+  <property name="db.jar" location="${lib.in}/hsqldb.jar"/>
   <property name="db.dir" location="./db"/>
 
   <path id="project.class.path">
@@ -21,10 +22,15 @@
   </path>
 
   <target name="libs" description="Copy libs to WEB-INF/lib">
-    <mkdir dir="war/WEB-INF/lib" />
-    <copy todir="war/WEB-INF/lib" file="${gwt.sdk}/gwt-servlet.jar" />
-    <copy todir="war/WEB-INF/lib" file="${gwt.sdk}/gwt-servlet-deps.jar" />
-    <!-- Add any additional server libs that need to be copied -->
+    <delete dir="${lib.out}" failonerror="false"/>
+    <mkdir dir="${lib.out}" />
+    <copy todir="${lib.out}" file="${gwt.sdk}/gwt-servlet.jar" />
+    <copy todir="${lib.out}" file="${gwt.sdk}/gwt-servlet-deps.jar" />
+    <copy todir="${lib.out}" file="${gwt.sdk}/requestfactory-server.jar"/>
+    <copy todir="${lib.out}" file="${gwt.sdk}/validation-api-1.0.0.GA.jar"/>
+    <copy todir="${lib.out}" >
+      <fileset dir="${lib.in}" includes="**"/>
+    </copy>
   </target>
 
   <target name="javac" depends="libs" description="Compile java source to bytecode">
@@ -50,7 +56,7 @@
       <arg value="war"/>
       <!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
       <arg line="${gwt.args}"/>
-      <arg value="de.tempmodulename.akkuvita"/>
+      <arg value="de.akkuvita.akkuvita"/>
     </java>
   </target>
 
@@ -67,8 +73,8 @@
       <arg value="war"/>
       <!-- Additional arguments like -style PRETTY, -logLevel DEBUG or -nosuperDevMode -->
       <arg line="${gwt.args}"/>
-      <arg value="de.tempmodulename.akkuvita"/>
-      <arg value="de.tempmodulename.akkuvita"/>
+      <arg value="de.akkuvita.akkuvita"/>
+      <arg value="de.akkuvita.akkuvita"/>
     </java>
   </target>
 
@@ -81,6 +87,7 @@
   <target name="clean" description="Cleans this project">
     <delete dir="war/WEB-INF/classes" failonerror="false" />
     <delete dir="war/akkuvita" failonerror="false" />
+    <delete dir="${lib.out}"/>
     <delete dir="${db.dir}/data"/>
     <delete dir="gwt-unitCache"/>
   </target>

@@ -31,8 +31,7 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">create</property>
 
-        <mapping resource="com/google/musicstore/domain/Record.hbm.xml"/>
-        <mapping resource="com/google/musicstore/domain/Account.hbm.xml"/>
+        <mapping resource="de/akkuvita/domain/Akku.hbm.xml"/>
 
     </session-factory>
 

@@ -5,20 +5,30 @@
          version="2.5"
          xmlns="http://java.sun.com/xml/ns/javaee">
 
-  <!-- Servlets -->
-  <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>de.tempmodulename.server.GreetingServiceImpl</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/akkuvita/greet</url-pattern>
-  </servlet-mapping>
-  
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>akkuvita.html</welcome-file>
   </welcome-file-list>
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>requestFactoryServlet</servlet-name>
+    <servlet-class>com.google.web.bindery.requestfactory.server.RequestFactoryServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>requestFactoryServlet</servlet-name>
+    <url-pattern>/gwtRequest</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>TransactionContext</filter-name>
+    <filter-class>de.akkuvita.server.AkkuvitaService</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>TransactionContext</filter-name>
+    <url-pattern>/gwtRequest</url-pattern>
+  </filter-mapping>
 
 </web-app>
