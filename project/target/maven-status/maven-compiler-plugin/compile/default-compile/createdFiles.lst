@@ -1,0 +1,10 @@
+de\enviado\akkuvita\shared\AkkuRequest.class
+de\enviado\akkuvita\shared\AkkuVitaRequestFactoryDeobfuscatorBuilder.class
+de\enviado\akkuvita\shared\AkkuVitaRequestFactory.class
+de\enviado\akkuvita\client\AkkuVita$Binder.class
+de\enviado\akkuvita\server\AkkuLocator.class
+de\enviado\akkuvita\client\AkkuVita$1.class
+de\enviado\akkuvita\shared\AkkuProxy.class
+de\enviado\akkuvita\domain\Akku.class
+de\enviado\akkuvita\client\AkkuVita.class
+de\enviado\akkuvita\server\HibernateUtil.class
