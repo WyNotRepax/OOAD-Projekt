@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>9</zoom_level>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>36</x>
-      <y>342</y>
-      <w>126</w>
-      <h>99</h>
+      <x>420</x>
+      <y>210</y>
+      <w>98</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -21,10 +21,10 @@ Kunde
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>657</x>
-      <y>270</y>
-      <w>153</w>
-      <h>108</h>
+      <x>903</x>
+      <y>154</y>
+      <w>119</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -39,10 +39,10 @@ Akku
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>270</y>
-      <w>90</w>
-      <h>63</h>
+      <x>728</x>
+      <y>154</y>
+      <w>70</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -54,10 +54,10 @@ Event
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>306</x>
-      <y>342</y>
-      <w>117</w>
-      <h>108</h>
+      <x>630</x>
+      <y>210</y>
+      <w>91</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -72,10 +72,10 @@ PruefungsEvent
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>513</x>
-      <y>306</y>
-      <w>162</w>
-      <h>45</h>
+      <x>791</x>
+      <y>182</y>
+      <w>126</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-
 r1=-events
@@ -87,10 +87,10 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>153</x>
-      <y>369</y>
-      <w>171</w>
-      <h>45</h>
+      <x>511</x>
+      <y>231</y>
+      <w>133</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-
 r2=-kunde
@@ -102,10 +102,10 @@ m1=*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>414</x>
-      <y>324</y>
-      <w>81</w>
-      <h>81</h>
+      <x>714</x>
+      <y>196</y>
+      <w>63</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>70.0;10.0;70.0;70.0;10.0;70.0</additional_attributes>
@@ -113,10 +113,10 @@ m1=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
-      <y>504</y>
-      <w>153</w>
-      <h>63</h>
+      <x>602</x>
+      <y>336</y>
+      <w>119</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -128,10 +128,10 @@ ReparaturEingangsEvent
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>261</x>
-      <y>576</y>
-      <w>162</w>
-      <h>63</h>
+      <x>595</x>
+      <y>392</y>
+      <w>126</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -143,10 +143,10 @@ ReparaturAusgangsEvent
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>288</x>
-      <y>648</y>
-      <w>135</w>
-      <h>63</h>
+      <x>616</x>
+      <y>448</y>
+      <w>105</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -158,10 +158,10 @@ AusmusterungsEvent
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>36</x>
-      <y>450</y>
-      <w>108</w>
-      <h>45</h>
+      <x>420</x>
+      <y>294</y>
+      <w>84</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;enumeration&gt;&gt;
@@ -171,10 +171,10 @@ Defekt</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>135</x>
-      <y>441</y>
-      <w>243</w>
-      <h>45</h>
+      <x>497</x>
+      <y>287</y>
+      <w>189</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;30.0;250.0;30.0;250.0;10.0</additional_attributes>
@@ -182,10 +182,10 @@ Defekt</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>414</x>
-      <y>324</y>
-      <w>81</w>
-      <h>243</h>
+      <x>714</x>
+      <y>196</y>
+      <w>63</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>70.0;10.0;70.0;250.0;10.0;250.0</additional_attributes>
@@ -193,10 +193,10 @@ Defekt</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>414</x>
-      <y>324</y>
-      <w>81</w>
-      <h>387</h>
+      <x>714</x>
+      <y>196</y>
+      <w>63</w>
+      <h>301</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>70.0;10.0;70.0;410.0;10.0;410.0</additional_attributes>
@@ -204,10 +204,10 @@ Defekt</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>414</x>
-      <y>324</y>
-      <w>81</w>
-      <h>315</h>
+      <x>714</x>
+      <y>196</y>
+      <w>63</w>
+      <h>245</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>70.0;10.0;70.0;330.0;10.0;330.0</additional_attributes>
@@ -215,10 +215,10 @@ Defekt</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1026</x>
-      <y>270</y>
-      <w>117</w>
-      <h>45</h>
+      <x>1190</x>
+      <y>154</y>
+      <w>91</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;interface&gt;&gt;
@@ -228,10 +228,10 @@ AkkuVitaService</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1017</x>
-      <y>540</y>
-      <w>135</w>
-      <h>45</h>
+      <x>1183</x>
+      <y>364</y>
+      <w>105</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;class&gt;&gt;
@@ -241,10 +241,10 @@ AkkuVitaServiceImpl</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1080</x>
-      <y>306</y>
-      <w>27</w>
-      <h>252</h>
+      <x>1232</x>
+      <y>182</y>
+      <w>21</w>
+      <h>196</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
@@ -252,22 +252,22 @@ AkkuVitaServiceImpl</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>0</x>
-      <y>162</y>
-      <w>828</w>
-      <h>585</h>
+      <x>392</x>
+      <y>70</y>
+      <w>644</w>
+      <h>455</h>
     </coordinates>
-    <panel_attributes>data
+    <panel_attributes>domain
 valign=top</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>945</x>
-      <y>414</y>
-      <w>279</w>
-      <h>315</h>
+      <x>1127</x>
+      <y>266</y>
+      <w>217</w>
+      <h>245</h>
     </coordinates>
     <panel_attributes>Server
 valign=top</panel_attributes>
@@ -276,10 +276,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>945</x>
-      <y>72</y>
-      <w>279</w>
-      <h>315</h>
+      <x>1127</x>
+      <y>0</y>
+      <w>217</w>
+      <h>245</h>
     </coordinates>
     <panel_attributes>Client
 valign=top</panel_attributes>
@@ -288,10 +288,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1026</x>
-      <y>135</y>
-      <w>117</w>
-      <h>54</h>
+      <x>1190</x>
+      <y>49</y>
+      <w>91</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>style=autoresize
 AkkuVita
@@ -302,10 +302,10 @@ AkkuVita
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1359</x>
-      <y>135</y>
-      <w>90</w>
-      <h>27</h>
+      <x>1449</x>
+      <y>49</y>
+      <w>70</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>EntryPoint</panel_attributes>
     <additional_attributes/>
@@ -313,10 +313,10 @@ AkkuVita
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1134</x>
-      <y>135</y>
-      <w>243</w>
-      <h>27</h>
+      <x>1274</x>
+      <y>49</y>
+      <w>189</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>250.0;10.0;10.0;10.0</additional_attributes>
@@ -324,10 +324,10 @@ AkkuVita
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1080</x>
-      <y>180</y>
-      <w>27</w>
-      <h>108</h>
+      <x>1232</x>
+      <y>84</y>
+      <w>21</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
@@ -335,10 +335,10 @@ AkkuVita
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>819</x>
-      <y>279</y>
-      <w>225</w>
-      <h>27</h>
+      <x>1029</x>
+      <y>161</y>
+      <w>175</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;230.0;10.0</additional_attributes>
@@ -346,12 +346,40 @@ AkkuVita
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>819</x>
-      <y>549</y>
-      <w>216</w>
-      <h>27</h>
+      <x>1029</x>
+      <y>371</y>
+      <w>168</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>392</x>
+      <y>532</y>
+      <w>644</w>
+      <h>455</h>
+    </coordinates>
+    <panel_attributes>shared
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>406</x>
+      <y>546</y>
+      <w>147</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>style=autoresize
+&lt;&lt;enumeration&gt;&gt;
+AkkuStatus
+-
++code: float {readOnly}
++description: String {readOnly}</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

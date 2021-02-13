@@ -1,6 +1,5 @@
 package de.enviado.akkuvita.server;
 
-import de.enviado.akkuvita.domain.Akku;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 

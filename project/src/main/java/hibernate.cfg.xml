@@ -14,7 +14,7 @@
         <property name="connection.password"/>
 
         <!-- JDBC connection pool (use the built-in) -->
-        <property name="connection.pool_size">1</property>
+        <property name="connection.pool_size">5</property>
 
         <!-- SQL dialect -->
         <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
@@ -31,7 +31,13 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">create</property>
 
-        <mapping class="de.enviado.akkuvita.domain.Akku"/>
+        <property name="hibernate.enable_lazy_load_no_trans" >true</property>
+
+        <mapping class="de.enviado.akkuvita.domain.entity.Akku"/>
+        <mapping class="de.enviado.akkuvita.domain.entity.AkkuEvent"/>
+        <mapping class="de.enviado.akkuvita.domain.entity.AkkuPruefungsEvent"/>
+
+
     </session-factory>
 
 </hibernate-configuration>

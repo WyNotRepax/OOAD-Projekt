@@ -20,12 +20,15 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.GWT.UncaughtExceptionHandler;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.SimpleEventBus;
-import de.enviado.akkuvita.shared.AkkuProxy;
-import de.enviado.akkuvita.shared.AkkuRequest;
-import de.enviado.akkuvita.shared.AkkuVitaRequestFactory;
+import com.google.web.bindery.requestfactory.shared.*;
+import de.enviado.akkuvita.shared.*;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Widget;
+import de.enviado.akkuvita.shared.proxy.AkkuProxy;
+import de.enviado.akkuvita.shared.proxy.AkkuPruefungsEventProxy;
+import de.enviado.akkuvita.shared.service.AkkuEventRequest;
 
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -39,7 +42,7 @@ public class AkkuVita implements EntryPoint {
 
   private static final Logger log = Logger.getLogger(AkkuVita.class.getName());
 
-  EventBus eventBus = new SimpleEventBus();
+  private EventBus eventBus = new SimpleEventBus();
 
   /**
    * This method sets up the top-level services used by the application.
@@ -54,10 +57,17 @@ public class AkkuVita implements EntryPoint {
     final AkkuVitaRequestFactory requests = GWT.create(AkkuVitaRequestFactory.class);
     requests.initialize(eventBus);
 
-    AkkuRequest context = requests.akkuRequest();
-    AkkuProxy akkuProxy = context.create(AkkuProxy.class);
-    akkuProxy.setSeriennummer("069");
-    context.persist().using(akkuProxy).fire();
+
+    AkkuEventRequest context2 = requests.akkuEventRequest();
+    AkkuPruefungsEventProxy akkuEventProxy = context2.create(AkkuPruefungsEventProxy.class);
+    AkkuProxy akku2 = context2.create(AkkuProxy.class);
+    akku2.setSeriennummer("ID");
+    akkuEventProxy.setAkku(akku2);
+    akkuEventProxy.setDate(new Date());
+    akkuEventProxy.setLadezyklen(12);
+    Request<Void> voidRequest = context2.persist().using(akkuEventProxy);
+    voidRequest.fire();
+
 
     // Fast test to see if the sample is not being run from devmode
     if (GWT.getHostPageBaseURL().startsWith("file:")) {
