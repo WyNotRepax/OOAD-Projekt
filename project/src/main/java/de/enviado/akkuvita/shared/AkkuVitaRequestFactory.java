@@ -16,9 +16,8 @@
 package de.enviado.akkuvita.shared;
 
 import com.google.web.bindery.requestfactory.shared.*;
-import de.enviado.akkuvita.shared.service.AkkuEventRequest;
-import de.enviado.akkuvita.shared.service.AkkuPruefungsEventRequest;
-import de.enviado.akkuvita.shared.service.AkkuRequest;
+import de.enviado.akkuvita.domain.entity.AusmusterungsEvent;
+import de.enviado.akkuvita.shared.service.*;
 
 /**
  * Instantiate via
@@ -27,5 +26,5 @@ import de.enviado.akkuvita.shared.service.AkkuRequest;
 public interface AkkuVitaRequestFactory extends RequestFactory {
   AkkuRequest akkuRequest();
   AkkuEventRequest akkuEventRequest();
-  AkkuPruefungsEventRequest akkuPruefungsEventRequest();
+  KundeRequest kundeRequest();
 }

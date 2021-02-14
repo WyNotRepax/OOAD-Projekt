@@ -36,6 +36,9 @@
         <mapping class="de.enviado.akkuvita.domain.entity.Akku"/>
         <mapping class="de.enviado.akkuvita.domain.entity.AkkuEvent"/>
         <mapping class="de.enviado.akkuvita.domain.entity.AkkuPruefungsEvent"/>
+        <mapping class="de.enviado.akkuvita.domain.entity.ReperaturEingangsEvent"/>
+        <mapping class="de.enviado.akkuvita.domain.entity.ReperaturAusgangsEvent"/>
+        <mapping class="de.enviado.akkuvita.domain.entity.Kunde"/>
 
 
     </session-factory>

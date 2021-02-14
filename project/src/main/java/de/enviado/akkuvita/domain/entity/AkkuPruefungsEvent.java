@@ -5,6 +5,9 @@ import org.hibernate.Session;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class AkkuPruefungsEvent extends AkkuEvent {
@@ -20,6 +23,11 @@ public class AkkuPruefungsEvent extends AkkuEvent {
 
     @Column(name = "CYCLES")
     private Integer ladezyklen;
+
+    @ManyToOne
+    @NotNull
+    @JoinColumn(name="CUSTOMERID")
+    private Kunde kunde;
 
     public AkkuPruefungsEvent() {
         super();
@@ -55,6 +63,15 @@ public class AkkuPruefungsEvent extends AkkuEvent {
 
     public void setLadezyklen(Integer ladezyklen) {
         this.ladezyklen = ladezyklen;
+    }
+
+    public Kunde getKunde() {
+        return kunde;
+    }
+
+    public void setKunde(Kunde kunde) {
+        kunde.addAkkuPruefungsEvent(this);
+        this.kunde = kunde;
     }
 
     @Override

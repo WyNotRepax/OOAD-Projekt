@@ -46,7 +46,7 @@ public class Akku implements Serializable {
     @NotNull
     @OneToMany
     @JoinColumn(name="SERIAL")
-    Set<AkkuEvent> events;
+    private Set<AkkuEvent> events;
 
     public Akku() {
         this.reperaturanzahl = 0;

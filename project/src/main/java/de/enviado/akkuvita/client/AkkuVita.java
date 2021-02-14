@@ -21,11 +21,13 @@ import com.google.gwt.core.client.GWT.UncaughtExceptionHandler;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.SimpleEventBus;
 import com.google.web.bindery.requestfactory.shared.*;
+import de.enviado.akkuvita.domain.entity.Kunde;
 import de.enviado.akkuvita.shared.*;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Widget;
 import de.enviado.akkuvita.shared.proxy.AkkuProxy;
 import de.enviado.akkuvita.shared.proxy.AkkuPruefungsEventProxy;
+import de.enviado.akkuvita.shared.proxy.KundeProxy;
 import de.enviado.akkuvita.shared.service.AkkuEventRequest;
 
 import java.util.Date;
@@ -60,11 +62,14 @@ public class AkkuVita implements EntryPoint {
 
     AkkuEventRequest context2 = requests.akkuEventRequest();
     AkkuPruefungsEventProxy akkuEventProxy = context2.create(AkkuPruefungsEventProxy.class);
+    KundeProxy kundeProxy = context2.create(KundeProxy.class);
+    kundeProxy.setKundennummer(69);
     AkkuProxy akku2 = context2.create(AkkuProxy.class);
     akku2.setSeriennummer("ID");
     akkuEventProxy.setAkku(akku2);
     akkuEventProxy.setDate(new Date());
     akkuEventProxy.setLadezyklen(12);
+    akkuEventProxy.setKunde(kundeProxy);
     Request<Void> voidRequest = context2.persist().using(akkuEventProxy);
     voidRequest.fire();
 
