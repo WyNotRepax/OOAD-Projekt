@@ -29,6 +29,7 @@ import de.enviado.akkuvita.shared.proxy.AkkuProxy;
 import de.enviado.akkuvita.shared.proxy.AkkuPruefungsEventProxy;
 import de.enviado.akkuvita.shared.proxy.KundeProxy;
 import de.enviado.akkuvita.shared.service.AkkuEventRequest;
+import de.enviado.akkuvita.shared.service.AkkuRequest;
 
 import java.util.Date;
 import java.util.logging.Level;
@@ -61,7 +62,7 @@ public class AkkuVita implements EntryPoint {
 
 
     AkkuEventRequest context2 = requests.akkuEventRequest();
-    AkkuPruefungsEventProxy akkuEventProxy = context2.create(AkkuPruefungsEventProxy.class);
+    final AkkuPruefungsEventProxy akkuEventProxy = context2.create(AkkuPruefungsEventProxy.class);
     KundeProxy kundeProxy = context2.create(KundeProxy.class);
     kundeProxy.setKundennummer(69);
     AkkuProxy akku2 = context2.create(AkkuProxy.class);
@@ -73,6 +74,18 @@ public class AkkuVita implements EntryPoint {
     Request<Void> voidRequest = context2.persist().using(akkuEventProxy);
     voidRequest.fire();
 
+    AkkuRequest context = requests.akkuRequest();
+    context.findAkku("ID").fire(new Receiver<AkkuProxy>() {
+      @Override
+      public void onSuccess(AkkuProxy response) {
+        response.setReperaturanzahl(5);
+        requests.akkuRequest().persist().using(response).fire();
+      }
+
+      @Override
+      public void onFailure(ServerFailure error) {
+      }
+    });
 
     // Fast test to see if the sample is not being run from devmode
     if (GWT.getHostPageBaseURL().startsWith("file:")) {
