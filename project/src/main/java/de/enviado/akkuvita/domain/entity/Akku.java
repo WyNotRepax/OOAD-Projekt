@@ -15,9 +15,6 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-//TODO: Implement ReperaturAusgangsEvent + Proxy + Service
-//TODO: Implement AusmusterungsEvent + Proxy + Service
-
 @Entity
 @Table(name = "AKKU")
 public class Akku implements Serializable {
