@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>4</zoom_level>
+  <zoom_level>5</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>120</y>
-      <w>56</w>
-      <h>44</h>
+      <x>540</x>
+      <y>145</y>
+      <w>70</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -21,10 +21,10 @@ Kunde
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>948</x>
-      <y>92</y>
-      <w>68</w>
-      <h>44</h>
+      <x>1025</x>
+      <y>110</y>
+      <w>85</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -38,10 +38,10 @@ Akku
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>820</x>
-      <y>92</y>
-      <w>40</w>
-      <h>28</h>
+      <x>865</x>
+      <y>110</y>
+      <w>50</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -53,10 +53,10 @@ AkkuEvent
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>728</x>
-      <y>120</y>
-      <w>60</w>
-      <h>48</h>
+      <x>730</x>
+      <y>145</y>
+      <w>75</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -71,10 +71,10 @@ AkkuPruefungsEvent
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>856</x>
-      <y>108</y>
-      <w>100</w>
-      <h>20</h>
+      <x>910</x>
+      <y>130</y>
+      <w>125</w>
+      <h>25</h>
     </coordinates>
     <panel_attributes>lt=-
 r1=-events
@@ -86,36 +86,36 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>612</x>
-      <y>132</y>
-      <w>124</w>
-      <h>20</h>
+      <x>605</x>
+      <y>160</y>
+      <w>135</w>
+      <h>25</h>
     </coordinates>
     <panel_attributes>lt=-
 r2=-kunde
 m2=1
 r1=-events
 m1=*</panel_attributes>
-    <additional_attributes>10.0;20.0;290.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
-      <y>116</y>
-      <w>64</w>
-      <h>32</h>
+      <x>800</x>
+      <y>140</y>
+      <w>100</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>140.0;10.0;140.0;60.0;10.0;60.0</additional_attributes>
+    <additional_attributes>180.0;10.0;180.0;60.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>708</x>
-      <y>172</y>
-      <w>80</w>
-      <h>28</h>
+      <x>705</x>
+      <y>210</y>
+      <w>100</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -127,10 +127,10 @@ AkkuReparaturEingangsEvent
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>704</x>
-      <y>204</y>
-      <w>84</w>
-      <h>28</h>
+      <x>700</x>
+      <y>250</y>
+      <w>105</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -142,10 +142,10 @@ AkkuReparaturAusgangsEvent
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>716</x>
-      <y>236</y>
-      <w>72</w>
-      <h>28</h>
+      <x>715</x>
+      <y>290</y>
+      <w>90</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;entity&gt;&gt;
@@ -157,57 +157,57 @@ AkkuAusmusterungsEvent
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>564</x>
-      <y>144</y>
-      <w>172</w>
-      <h>204</h>
+      <x>545</x>
+      <y>175</y>
+      <w>195</w>
+      <h>255</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=*
 r2=-defekt
 m2=1</panel_attributes>
-    <additional_attributes>10.0;480.0;180.0;480.0;180.0;20.0;410.0;20.0</additional_attributes>
+    <additional_attributes>10.0;480.0;180.0;480.0;180.0;20.0;370.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
-      <y>116</y>
-      <w>64</w>
-      <h>84</h>
+      <x>800</x>
+      <y>140</y>
+      <w>100</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>140.0;10.0;140.0;190.0;10.0;190.0</additional_attributes>
+    <additional_attributes>180.0;10.0;180.0;190.0;10.0;190.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
-      <y>116</y>
-      <w>64</w>
-      <h>148</h>
+      <x>800</x>
+      <y>140</y>
+      <w>100</w>
+      <h>185</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>140.0;10.0;140.0;350.0;10.0;350.0</additional_attributes>
+    <additional_attributes>180.0;10.0;180.0;350.0;10.0;350.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
-      <y>116</y>
-      <w>64</w>
-      <h>116</h>
+      <x>800</x>
+      <y>140</y>
+      <w>100</w>
+      <h>145</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>140.0;10.0;140.0;270.0;10.0;270.0</additional_attributes>
+    <additional_attributes>180.0;10.0;180.0;270.0;10.0;270.0</additional_attributes>
   </element>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>420</x>
-      <y>76</y>
-      <w>712</w>
-      <h>228</h>
+      <x>365</x>
+      <y>90</y>
+      <w>890</w>
+      <h>285</h>
     </coordinates>
     <panel_attributes>domain.entity
 valign=top
@@ -217,10 +217,10 @@ halign=left</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>420</x>
-      <y>308</y>
-      <w>712</w>
-      <h>424</h>
+      <x>365</x>
+      <y>380</y>
+      <w>890</w>
+      <h>530</h>
     </coordinates>
     <panel_attributes>shared
 valign=top
@@ -231,10 +231,10 @@ layer=-1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>484</x>
-      <y>316</y>
-      <w>84</w>
-      <h>36</h>
+      <x>445</x>
+      <y>390</y>
+      <w>105</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;enumeration&gt;&gt;
@@ -247,10 +247,10 @@ AkkuDefekt
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1012</x>
-      <y>680</y>
-      <w>112</w>
-      <h>44</h>
+      <x>1105</x>
+      <y>845</y>
+      <w>140</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;interface&gt;&gt;
@@ -264,10 +264,10 @@ AkkuVitaRequestFactory
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>424</x>
-      <y>356</y>
-      <w>704</w>
-      <h>272</h>
+      <x>370</x>
+      <y>440</y>
+      <w>880</w>
+      <h>340</h>
     </coordinates>
     <panel_attributes>proxy
 valign=top
@@ -277,10 +277,10 @@ halign=left</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>864</x>
-      <y>644</y>
-      <w>144</w>
-      <h>36</h>
+      <x>920</x>
+      <y>800</y>
+      <w>180</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;interface&gt;&gt;
@@ -293,10 +293,10 @@ AkkuRequest
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>712</x>
-      <y>644</y>
-      <w>140</w>
-      <h>28</h>
+      <x>730</x>
+      <y>800</y>
+      <w>175</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;interface&gt;&gt;
@@ -308,10 +308,10 @@ AkkuEventRequest
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>448</x>
-      <y>644</y>
-      <w>160</w>
-      <h>36</h>
+      <x>400</x>
+      <y>800</y>
+      <w>200</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;interface&gt;&gt;
@@ -324,10 +324,10 @@ KundeRequest
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>676</x>
-      <y>416</y>
-      <w>96</w>
-      <h>88</h>
+      <x>685</x>
+      <y>515</y>
+      <w>120</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;interface&gt;&gt;
@@ -348,10 +348,10 @@ AkkuPruefungsEventProxy
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>688</x>
-      <y>588</y>
-      <w>84</w>
-      <h>36</h>
+      <x>700</x>
+      <y>730</y>
+      <w>105</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;interface&gt;&gt;
@@ -364,10 +364,10 @@ AkkuAusmusterungsEventProxy
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>676</x>
-      <y>548</y>
-      <w>96</w>
-      <h>36</h>
+      <x>685</x>
+      <y>680</y>
+      <w>120</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;interface&gt;&gt;
@@ -380,10 +380,10 @@ AkkuReparaturAusgangsEventProxy
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>676</x>
-      <y>508</y>
-      <w>96</w>
-      <h>36</h>
+      <x>685</x>
+      <y>630</y>
+      <w>120</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;interface&gt;&gt;
@@ -396,10 +396,10 @@ AkkuReparaturEingangsEventProxy
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>776</x>
-      <y>368</y>
-      <w>76</w>
-      <h>48</h>
+      <x>810</x>
+      <y>455</y>
+      <w>95</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;interface&gt;&gt;
@@ -414,10 +414,10 @@ AkkuEventProxy
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>424</x>
-      <y>632</y>
-      <w>704</w>
-      <h>96</h>
+      <x>370</x>
+      <y>785</y>
+      <w>880</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>service
 valign=top
@@ -428,10 +428,10 @@ layer=-1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>768</x>
-      <y>412</y>
-      <w>56</w>
-      <h>164</h>
+      <x>800</x>
+      <y>510</y>
+      <w>70</w>
+      <h>205</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>120.0;10.0;120.0;390.0;10.0;390.0</additional_attributes>
@@ -439,10 +439,10 @@ layer=-1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>768</x>
-      <y>412</y>
-      <w>56</w>
-      <h>124</h>
+      <x>800</x>
+      <y>510</y>
+      <w>70</w>
+      <h>155</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>120.0;10.0;120.0;290.0;10.0;290.0</additional_attributes>
@@ -450,10 +450,10 @@ layer=-1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>768</x>
-      <y>412</y>
-      <w>56</w>
-      <h>204</h>
+      <x>800</x>
+      <y>510</y>
+      <w>70</w>
+      <h>255</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>120.0;10.0;120.0;490.0;10.0;490.0</additional_attributes>
@@ -461,10 +461,10 @@ layer=-1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>768</x>
-      <y>412</y>
-      <w>56</w>
-      <h>32</h>
+      <x>800</x>
+      <y>510</y>
+      <w>70</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>120.0;10.0;120.0;60.0;10.0;60.0</additional_attributes>
@@ -472,10 +472,10 @@ layer=-1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>884</x>
-      <y>368</y>
-      <w>124</w>
-      <h>76</h>
+      <x>945</x>
+      <y>455</y>
+      <w>155</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;interface&gt;&gt;
@@ -494,10 +494,10 @@ AkkuProxy
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>488</x>
-      <y>368</y>
-      <w>120</w>
-      <h>44</h>
+      <x>450</x>
+      <y>455</y>
+      <w>150</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>style=autoresize
 &lt;&lt;interface&gt;&gt;
@@ -511,10 +511,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
-      <y>160</y>
-      <w>12</w>
-      <h>216</h>
+      <x>590</x>
+      <y>195</y>
+      <w>15</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;520.0</additional_attributes>
@@ -522,10 +522,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>844</x>
-      <y>116</y>
-      <w>12</w>
-      <h>260</h>
+      <x>895</x>
+      <y>140</y>
+      <w>15</w>
+      <h>325</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;630.0</additional_attributes>
@@ -533,54 +533,54 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>668</x>
-      <y>160</y>
-      <w>68</w>
-      <h>268</h>
+      <x>675</x>
+      <y>195</y>
+      <w>65</w>
+      <h>335</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>150.0;10.0;10.0;10.0;10.0;650.0;20.0;650.0</additional_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0;10.0;650.0;20.0;650.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>664</x>
-      <y>192</y>
-      <w>52</w>
-      <h>328</h>
+      <x>670</x>
+      <y>235</y>
+      <w>45</w>
+      <h>410</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>110.0;10.0;10.0;10.0;10.0;800.0;30.0;800.0</additional_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;800.0;30.0;800.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>270</y>
+      <w>45</w>
+      <h>425</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;830.0;40.0;830.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>660</x>
-      <y>220</y>
-      <w>52</w>
-      <h>340</h>
+      <y>310</y>
+      <w>65</w>
+      <h>435</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>110.0;10.0;10.0;10.0;10.0;830.0;40.0;830.0</additional_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0;10.0;850.0;80.0;850.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>656</x>
-      <y>252</y>
-      <w>68</w>
-      <h>348</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>150.0;10.0;10.0;10.0;10.0;850.0;80.0;850.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1000</x>
-      <y>132</y>
-      <w>12</w>
-      <h>244</h>
+      <x>1090</x>
+      <y>160</y>
+      <w>15</w>
+      <h>305</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;590.0</additional_attributes>
@@ -588,10 +588,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1004</x>
-      <y>132</y>
-      <w>16</w>
-      <h>524</h>
+      <x>1095</x>
+      <y>160</y>
+      <w>20</w>
+      <h>655</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>20.0;10.0;20.0;1290.0;10.0;1290.0</additional_attributes>
@@ -599,10 +599,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>848</x>
-      <y>116</y>
-      <w>16</w>
-      <h>540</h>
+      <x>900</x>
+      <y>140</y>
+      <w>20</w>
+      <h>675</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>20.0;10.0;20.0;1330.0;10.0;1330.0</additional_attributes>
@@ -610,10 +610,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>604</x>
-      <y>160</y>
-      <w>16</w>
-      <h>496</h>
+      <x>595</x>
+      <y>195</y>
+      <w>20</w>
+      <h>620</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>20.0;10.0;20.0;1220.0;10.0;1220.0</additional_attributes>
@@ -621,10 +621,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>768</x>
-      <y>436</y>
-      <w>28</w>
-      <h>216</h>
+      <x>800</x>
+      <y>540</y>
+      <w>35</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;50.0;10.0;50.0;520.0</additional_attributes>
@@ -632,10 +632,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>768</x>
-      <y>528</y>
-      <w>24</w>
-      <h>124</h>
+      <x>800</x>
+      <y>655</y>
+      <w>30</w>
+      <h>155</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;40.0;10.0;40.0;290.0</additional_attributes>
@@ -643,10 +643,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>768</x>
-      <y>568</y>
-      <w>20</w>
-      <h>84</h>
+      <x>800</x>
+      <y>705</y>
+      <w>25</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;30.0;10.0;30.0;190.0</additional_attributes>
@@ -654,10 +654,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>768</x>
-      <y>608</y>
-      <w>16</w>
-      <h>44</h>
+      <x>800</x>
+      <y>755</y>
+      <w>20</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;20.0;10.0;20.0;90.0</additional_attributes>
@@ -665,10 +665,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>844</x>
-      <y>412</y>
-      <w>12</w>
-      <h>240</h>
+      <x>895</x>
+      <y>510</y>
+      <w>15</w>
+      <h>300</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;580.0</additional_attributes>
@@ -676,10 +676,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1000</x>
-      <y>440</y>
-      <w>12</w>
-      <h>212</h>
+      <x>1090</x>
+      <y>545</y>
+      <w>15</w>
+      <h>265</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;510.0</additional_attributes>
@@ -687,10 +687,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
-      <y>408</y>
-      <w>12</w>
-      <h>244</h>
+      <x>590</x>
+      <y>505</y>
+      <w>15</w>
+      <h>305</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;590.0</additional_attributes>
@@ -698,10 +698,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1000</x>
-      <y>676</y>
-      <w>20</w>
-      <h>32</h>
+      <x>1090</x>
+      <y>840</y>
+      <w>25</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0;30.0;60.0</additional_attributes>
@@ -709,10 +709,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>844</x>
-      <y>668</y>
-      <w>176</w>
-      <h>48</h>
+      <x>895</x>
+      <y>830</y>
+      <w>220</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0;420.0;100.0</additional_attributes>
@@ -720,10 +720,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
-      <y>676</y>
-      <w>420</w>
-      <h>48</h>
+      <x>590</x>
+      <y>840</y>
+      <w>525</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0;1030.0;100.0</additional_attributes>
@@ -731,10 +731,10 @@ KundeProxy
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>472</x>
-      <y>316</y>
-      <w>212</w>
-      <h>184</h>
+      <x>430</x>
+      <y>390</y>
+      <w>265</w>
+      <h>230</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>30.0;10.0;10.0;10.0;10.0;440.0;510.0;440.0</additional_attributes>
