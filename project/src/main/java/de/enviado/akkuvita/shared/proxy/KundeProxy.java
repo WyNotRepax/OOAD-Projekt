@@ -7,6 +7,4 @@ import de.enviado.akkuvita.domain.entity.Kunde;
 @ProxyFor(Kunde.class)
 public interface KundeProxy extends EntityProxy {
     void setKundennummer(Integer kundennummer);
-
-    void setKunde(KundeProxy kunde);
 }

@@ -17,11 +17,10 @@ public interface AkkuProxy extends EntityProxy {
     Date getProduktionsdatum();
     void setProduktionsdatum(Date produktionsdatum);
 
-    AkkuDefekt getStatus();
-    void setStatus(AkkuDefekt status);
-
     Integer getReperaturanzahl();
     void setReperaturanzahl(Integer reperaturanzahl);
 
     Set<AkkuEventProxy> getEvents();
+
+    AkkuEventProxy getMostRecentEvent();
 }

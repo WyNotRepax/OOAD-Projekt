@@ -22,9 +22,9 @@ public class AkkuPruefungsEvent extends AkkuEvent {
     @Column(name = "CYCLES")
     private Integer ladezyklen;
 
-    @Column(name = "STATUS")
+    @Column(name = "FAULT")
     @Enumerated(EnumType.STRING)
-    private AkkuDefekt status;
+    private AkkuDefekt defekt;
 
     @ManyToOne
     @NotNull
@@ -45,7 +45,7 @@ public class AkkuPruefungsEvent extends AkkuEvent {
         this.notiz = copyFrom.notiz;
         this.ticketnr = copyFrom.ticketnr;
         this.ladezyklen = copyFrom.ladezyklen;
-        this.status = copyFrom.status;
+        this.defekt = copyFrom.defekt;
         this.kunde = copyFrom.kunde;
     }
 
@@ -90,16 +90,6 @@ public class AkkuPruefungsEvent extends AkkuEvent {
         this.kunde = kunde;
     }
 
-    @Override
-    public String toString() {
-        return "AkkuPruefungsEvent{" +
-                "notiz='" + notiz + '\'' +
-                ", kapazitaet=" + kapazitaet +
-                ", ticketnr=" + ticketnr +
-                ", ladezyklen=" + ladezyklen +
-                "} " + super.toString();
-    }
-
     public static AkkuEvent findAkkuPruefungsEvent(Long id){
         try(Session session = HibernateUtil.getSessionFactory().openSession()){
             session.beginTransaction();
@@ -109,11 +99,11 @@ public class AkkuPruefungsEvent extends AkkuEvent {
         }
     }
 
-    public AkkuDefekt getStatus() {
-        return status;
+    public AkkuDefekt getDefekt() {
+        return defekt;
     }
 
-    public void setStatus(AkkuDefekt status) {
-        this.status = status;
+    public void setDefekt(AkkuDefekt defekt) {
+        this.defekt = defekt;
     }
 }

@@ -2,6 +2,7 @@ package de.enviado.akkuvita.shared.proxy;
 
 import com.google.web.bindery.requestfactory.shared.ProxyFor;
 import de.enviado.akkuvita.domain.entity.AkkuPruefungsEvent;
+import de.enviado.akkuvita.shared.AkkuDefekt;
 
 @ProxyFor(AkkuPruefungsEvent.class)
 public interface AkkuPruefungsEventProxy extends AkkuEventProxy {
@@ -21,4 +22,10 @@ public interface AkkuPruefungsEventProxy extends AkkuEventProxy {
     Integer getLadezyklen();
 
     void setLadezyklen(Integer ladezyklen);
+
+    void setKunde(KundeProxy kunde);
+
+    AkkuDefekt getDefekt();
+
+    void setDefekt(AkkuDefekt defekt);
 }

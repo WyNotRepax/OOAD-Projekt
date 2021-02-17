@@ -1,6 +1,7 @@
 package de.enviado.akkuvita.domain.entity;
 
 
+import com.google.gwt.dev.util.Pair;
 import de.enviado.akkuvita.server.HibernateUtil;
 import de.enviado.akkuvita.shared.AkkuDefekt;
 import org.hibernate.Session;
@@ -9,6 +10,7 @@ import javax.persistence.*;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -128,6 +130,10 @@ public class Akku implements Serializable {
 
     public Set<AkkuEvent> getEvents() {
         return events;
+    }
+
+    public AkkuEvent getMostRecentEvent(){
+        return events.stream().min(Comparator.comparing(AkkuEvent::getDate)).orElse(null);
     }
 
     /**
