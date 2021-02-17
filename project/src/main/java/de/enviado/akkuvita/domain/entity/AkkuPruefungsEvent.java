@@ -1,12 +1,10 @@
 package de.enviado.akkuvita.domain.entity;
 
 import de.enviado.akkuvita.server.HibernateUtil;
+import de.enviado.akkuvita.shared.AkkuDefekt;
 import org.hibernate.Session;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -23,6 +21,10 @@ public class AkkuPruefungsEvent extends AkkuEvent {
 
     @Column(name = "CYCLES")
     private Integer ladezyklen;
+    
+    @Column(name = "STATUS")
+    @Enumerated(EnumType.STRING)
+    private AkkuDefekt status;
 
     @ManyToOne
     @NotNull

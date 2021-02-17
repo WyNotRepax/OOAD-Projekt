@@ -92,7 +92,7 @@ public class AkkuVita implements EntryPoint {
       log.log(Level.SEVERE, "The AkkuVita cannot be run without its"
           + " server component.  If you are running the sample from a"
           + " GWT distribution, use the 'ant devmode' target to launch"
-          + " the DTRF server.");
+          + " the Server.");
     }
   }
 }

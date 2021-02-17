@@ -2,7 +2,7 @@ package de.enviado.akkuvita.domain.entity;
 
 
 import de.enviado.akkuvita.server.HibernateUtil;
-import de.enviado.akkuvita.shared.AkkuStatus;
+import de.enviado.akkuvita.shared.AkkuDefekt;
 import org.hibernate.Session;
 
 import javax.persistence.*;
@@ -31,9 +31,6 @@ public class Akku implements Serializable {
     @Column(name = "PRODUCTION_DATE")
     private Date produktionsdatum;
 
-    @Column(name = "STATUS")
-    @Enumerated(EnumType.STRING)
-    private AkkuStatus status;
 
     @Column(name = "REPAIR_COUNT")
     @DecimalMin("0")
@@ -125,11 +122,11 @@ public class Akku implements Serializable {
         this.produktionsdatum = produktionsdatum;
     }
 
-    public AkkuStatus getStatus() {
+    public AkkuDefekt getStatus() {
         return status;
     }
 
-    public void setStatus(AkkuStatus status) {
+    public void setStatus(AkkuDefekt status) {
         this.status = status;
     }
 

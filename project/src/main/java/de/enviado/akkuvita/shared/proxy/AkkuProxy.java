@@ -3,7 +3,7 @@ package de.enviado.akkuvita.shared.proxy;
 import com.google.web.bindery.requestfactory.shared.EntityProxy;
 import com.google.web.bindery.requestfactory.shared.ProxyFor;
 import de.enviado.akkuvita.domain.entity.Akku;
-import de.enviado.akkuvita.shared.AkkuStatus;
+import de.enviado.akkuvita.shared.AkkuDefekt;
 
 import java.util.Date;
 import java.util.Set;
@@ -17,8 +17,8 @@ public interface AkkuProxy extends EntityProxy {
     Date getProduktionsdatum();
     void setProduktionsdatum(Date produktionsdatum);
 
-    AkkuStatus getStatus();
-    void setStatus(AkkuStatus status);
+    AkkuDefekt getStatus();
+    void setStatus(AkkuDefekt status);
 
     Integer getReperaturanzahl();
     void setReperaturanzahl(Integer reperaturanzahl);
