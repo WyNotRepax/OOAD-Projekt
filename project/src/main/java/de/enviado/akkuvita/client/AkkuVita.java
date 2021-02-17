@@ -15,8 +15,6 @@
  */
 package de.enviado.akkuvita.client;
 
-import com.google.gwt.cell.client.Cell;
-import com.google.gwt.cell.client.TextCell;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.GWT.UncaughtExceptionHandler;
@@ -24,31 +22,9 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.event.shared.SimpleEventBus;
-import com.google.web.bindery.requestfactory.shared.*;
+import com.google.gwt.user.client.ui.*;
+import de.enviado.akkuvita.shared.AkkuVitaRequestFactory;
 
-import cern.colt.Arrays;
-import de.enviado.akkuvita.domain.entity.Kunde;
-import de.enviado.akkuvita.shared.*;
-import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.user.cellview.client.CellList;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.FlexTable;
-import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.Panel;
-import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.client.ui.Widget;
-import de.enviado.akkuvita.shared.proxy.AkkuProxy;
-import de.enviado.akkuvita.shared.proxy.AkkuPruefungsEventProxy;
-import de.enviado.akkuvita.shared.proxy.KundeProxy;
-import de.enviado.akkuvita.shared.service.AkkuEventRequest;
-import de.enviado.akkuvita.shared.service.AkkuRequest;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
