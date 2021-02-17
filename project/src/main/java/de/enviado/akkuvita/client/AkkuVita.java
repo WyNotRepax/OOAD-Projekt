@@ -24,6 +24,8 @@ import com.google.web.bindery.requestfactory.shared.*;
 import de.enviado.akkuvita.domain.entity.Kunde;
 import de.enviado.akkuvita.shared.*;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import de.enviado.akkuvita.shared.proxy.AkkuProxy;
 import de.enviado.akkuvita.shared.proxy.AkkuPruefungsEventProxy;
@@ -40,8 +42,6 @@ import java.util.logging.Logger;
  * application.
  */
 public class AkkuVita implements EntryPoint {
-  interface Binder extends UiBinder<Widget, AkkuVita> {
-  }
 
   private static final Logger log = Logger.getLogger(AkkuVita.class.getName());
 
@@ -57,6 +57,9 @@ public class AkkuVita implements EntryPoint {
       }
     });
 
+    TextBox t  = new TextBox();
+    t.setText("HALLO");
+    RootPanel.get().add(t);
     final AkkuVitaRequestFactory requests = GWT.create(AkkuVitaRequestFactory.class);
     requests.initialize(eventBus);
 
