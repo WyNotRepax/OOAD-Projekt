@@ -78,8 +78,6 @@ public class Akku implements Serializable {
     }
 
     public void persist() {
-        Logger logger = Logger.getLogger("AkkuLogger");
-        logger.log(Level.INFO, "Persist called on " + this.toString());
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             session.beginTransaction();
             session.saveOrUpdate(this);
