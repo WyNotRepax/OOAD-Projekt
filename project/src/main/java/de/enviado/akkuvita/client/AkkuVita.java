@@ -150,20 +150,16 @@ public class AkkuVita implements EntryPoint {
 		snr.setSize("300px", "50px");
 		snr.setText("Akku Seriennummer");
 		
-		TextBox kid = new TextBox();
-		kid.setSize("300px", "50px");
-		kid.setText("Kunden ID");
-		
 		TextBox event= new TextBox();
-		event.setText("Event");
-		event.setSize("300px", "50px");
+		event.setSize("600px", "50px");
+		event.setText("letztes Event");
+		
 		
 		t.setWidget(0, 0, snr);
-		t.setWidget(0, 1, kid);
-		t.setWidget(0, 2, event);
+		t.setWidget(0, 1, event);
 		
-		for (int i = 1; i <= 3; i++) {
-			for (int j = 0; j < 3; j++) {
+		for (int i = 1; i <= 2; i++) {
+			for (int j = 0; j < 2; j++) {
 				t.setText(i, j, "OK");
 				testFill(t);
 			}
@@ -172,13 +168,9 @@ public class AkkuVita implements EntryPoint {
 	}
 
 	private void testFill(FlexTable flexTable) {
-		Button details = new Button("Detail");
+		Button details = new Button("Weitere");
 		details.setSize("120px", "60px");
 		flexTable.setWidget(flexTable.getRowCount() - 1, 3, details);
-
-		Button neuAkkuList = new Button("Neu");
-		neuAkkuList.setSize("120px", "60px");
-		flexTable.setWidget(flexTable.getRowCount() - 1, 4, neuAkkuList);
 	}
 
 }
