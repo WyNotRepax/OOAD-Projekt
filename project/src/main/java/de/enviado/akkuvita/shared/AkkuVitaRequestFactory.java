@@ -16,7 +16,6 @@
 package de.enviado.akkuvita.shared;
 
 import com.google.web.bindery.requestfactory.shared.*;
-import de.enviado.akkuvita.domain.entity.AusmusterungsEvent;
 import de.enviado.akkuvita.shared.service.*;
 
 /**

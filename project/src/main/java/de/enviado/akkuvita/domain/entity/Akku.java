@@ -48,12 +48,16 @@ public class Akku implements Serializable {
     }
 
     protected Akku(Akku copyFrom) {
+        this();
         this.copyFrom(copyFrom);
     }
 
     public void copyFrom(Akku copyFrom) {
         this.seriennummer = copyFrom.seriennummer;
         this.version = copyFrom.version;
+        this.produktionsdatum = copyFrom.produktionsdatum;
+        this.reperaturanzahl = copyFrom.reperaturanzahl;
+        this.events = copyFrom.events;
     }
 
 
@@ -82,18 +86,6 @@ public class Akku implements Serializable {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Akku{" +
-                "seriennummer='" + seriennummer + '\'' +
-                ", version=" + version +
-                ", produktionsdatum=" + produktionsdatum +
-                ", status=" + status +
-                ", reperaturanzahl=" + reperaturanzahl +
-                //", events=" + events +
-                '}';
-    }
-
     public String getSeriennummer() {
         return seriennummer;
     }
@@ -120,14 +112,6 @@ public class Akku implements Serializable {
 
     public void setProduktionsdatum(Date produktionsdatum) {
         this.produktionsdatum = produktionsdatum;
-    }
-
-    public AkkuDefekt getStatus() {
-        return status;
-    }
-
-    public void setStatus(AkkuDefekt status) {
-        this.status = status;
     }
 
     public Integer getReperaturanzahl() {

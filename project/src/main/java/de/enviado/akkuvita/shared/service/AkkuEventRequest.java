@@ -11,8 +11,8 @@ import de.enviado.akkuvita.shared.proxy.*;
 @ExtraTypes({
         AkkuPruefungsEventProxy.class,
         AusmusterungsEventProxy.class,
-        ReperaturAusgangsEventProxy.class,
-        ReperaturEingangsEventProxy.class
+        ReparaturAusgangsEventProxy.class,
+        ReparaturEingangsEventProxy.class
 })
 public interface AkkuEventRequest extends RequestContext {
     InstanceRequest<AkkuEventProxy, Void> persist();

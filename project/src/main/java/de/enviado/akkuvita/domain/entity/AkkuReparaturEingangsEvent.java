@@ -8,12 +8,22 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
-public class ReperaturAusgangsEvent extends AkkuEvent{
+public class AkkuReparaturEingangsEvent extends AkkuEvent{
     @Column(name = "NOTE")
     private String notiz;
 
-    public ReperaturAusgangsEvent() {
+    public AkkuReparaturEingangsEvent() {
         super();
+    }
+
+    public AkkuReparaturEingangsEvent(AkkuReparaturEingangsEvent copyFrom){
+        this();
+        this.copyFrom(copyFrom);
+    }
+
+    protected void copyFrom(AkkuReparaturEingangsEvent copyFrom){
+        super.copyFrom(copyFrom);
+        this.notiz = notiz;
     }
 
     public String getNotiz() {
@@ -27,7 +37,7 @@ public class ReperaturAusgangsEvent extends AkkuEvent{
     public static AkkuEvent findReperaturEingangsEvent(Long id){
         try(Session session = HibernateUtil.getSessionFactory().openSession()){
             session.beginTransaction();
-            AkkuEvent akkuEvent = session.find(ReperaturAusgangsEvent.class,id);
+            AkkuEvent akkuEvent = session.find(AkkuReparaturEingangsEvent.class,id);
             session.getTransaction().commit();
             return akkuEvent;
         }

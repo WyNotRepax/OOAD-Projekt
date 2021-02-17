@@ -21,7 +21,7 @@ public class AkkuPruefungsEvent extends AkkuEvent {
 
     @Column(name = "CYCLES")
     private Integer ladezyklen;
-    
+
     @Column(name = "STATUS")
     @Enumerated(EnumType.STRING)
     private AkkuDefekt status;
@@ -33,6 +33,20 @@ public class AkkuPruefungsEvent extends AkkuEvent {
 
     public AkkuPruefungsEvent() {
         super();
+    }
+
+    public AkkuPruefungsEvent(AkkuPruefungsEvent copyFrom){
+        this.copyFrom(copyFrom);
+    }
+
+    protected void copyFrom(AkkuPruefungsEvent copyFrom) {
+        super.copyFrom(copyFrom);
+        this.kapazitaet = copyFrom.kapazitaet;
+        this.notiz = copyFrom.notiz;
+        this.ticketnr = copyFrom.ticketnr;
+        this.ladezyklen = copyFrom.ladezyklen;
+        this.status = copyFrom.status;
+        this.kunde = copyFrom.kunde;
     }
 
     public String getNotiz() {
@@ -93,5 +107,13 @@ public class AkkuPruefungsEvent extends AkkuEvent {
             session.getTransaction().commit();
             return akkuEvent;
         }
+    }
+
+    public AkkuDefekt getStatus() {
+        return status;
+    }
+
+    public void setStatus(AkkuDefekt status) {
+        this.status = status;
     }
 }

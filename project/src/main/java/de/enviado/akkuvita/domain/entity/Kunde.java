@@ -40,6 +40,19 @@ public class Kunde {
         events = new HashSet<>();
     }
 
+    public Kunde(Kunde copyFrom){
+        this();
+        this.copyFrom(copyFrom);
+    }
+
+    private void copyFrom(Kunde copyFrom) {
+        this.kundennummer = copyFrom.kundennummer;
+        this.name = copyFrom.name;
+        this.firma = copyFrom.firma;
+        this.events = copyFrom.events;
+        this.version = copyFrom.version;
+    }
+
     public Integer getKundennummer() {
         return kundennummer;
     }

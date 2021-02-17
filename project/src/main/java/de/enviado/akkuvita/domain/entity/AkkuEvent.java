@@ -34,6 +34,18 @@ public class AkkuEvent {
 
     }
 
+    public AkkuEvent(AkkuEvent copyFrom){
+        this();
+        this.copyFrom(copyFrom);
+    }
+
+    protected void copyFrom(AkkuEvent copyFrom){
+        this.id = copyFrom.id;
+        this.date = copyFrom.date;
+        this.version = copyFrom.version;
+        this.akku = copyFrom.akku;
+    }
+
     public void persist(){
         Logger logger = Logger.getLogger("AkkuLogger");
         logger.log(Level.INFO, "Persist called on " + this.toString());
@@ -86,4 +98,6 @@ public class AkkuEvent {
         this.akku = akku;
         akku.addEvent(this);
     }
+
+
 }

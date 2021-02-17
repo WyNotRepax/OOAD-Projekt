@@ -60,33 +60,6 @@ public class AkkuVita implements EntryPoint {
     final AkkuVitaRequestFactory requests = GWT.create(AkkuVitaRequestFactory.class);
     requests.initialize(eventBus);
 
-
-    AkkuEventRequest context2 = requests.akkuEventRequest();
-    final AkkuPruefungsEventProxy akkuEventProxy = context2.create(AkkuPruefungsEventProxy.class);
-    KundeProxy kundeProxy = context2.create(KundeProxy.class);
-    kundeProxy.setKundennummer(69);
-    AkkuProxy akku2 = context2.create(AkkuProxy.class);
-    akku2.setSeriennummer("ID");
-    akkuEventProxy.setAkku(akku2);
-    akkuEventProxy.setDate(new Date());
-    akkuEventProxy.setLadezyklen(12);
-    akkuEventProxy.setKunde(kundeProxy);
-    Request<Void> voidRequest = context2.persist().using(akkuEventProxy);
-    voidRequest.fire();
-
-    AkkuRequest context = requests.akkuRequest();
-    context.findAkku("ID").fire(new Receiver<AkkuProxy>() {
-      @Override
-      public void onSuccess(AkkuProxy response) {
-        response.setReperaturanzahl(5);
-        requests.akkuRequest().persist().using(response).fire();
-      }
-
-      @Override
-      public void onFailure(ServerFailure error) {
-      }
-    });
-
     // Fast test to see if the sample is not being run from devmode
     if (GWT.getHostPageBaseURL().startsWith("file:")) {
       log.log(Level.SEVERE, "The AkkuVita cannot be run without its"
