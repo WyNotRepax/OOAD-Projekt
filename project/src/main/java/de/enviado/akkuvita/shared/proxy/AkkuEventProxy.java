@@ -16,4 +16,6 @@ public interface AkkuEventProxy extends EntityProxy {
     AkkuProxy getAkku();
 
     void setAkku(AkkuProxy akku);
+
+
 }
