@@ -170,7 +170,7 @@ public class AkkuVita implements EntryPoint {
 
 		RootPanel.get().add(wrapper);
 
-	}
+	}	
 
 	private HorizontalPanel newCustomer() {
 		HorizontalPanel BatteryForm = new HorizontalPanel();
@@ -418,6 +418,8 @@ public class AkkuVita implements EntryPoint {
 	}
 
 	private void generateButtons(FlexTable wrapperFlexTable, int counter) {
+		VerticalPanel vp = new VerticalPanel();
+		
 		Button moreButton = new Button("Weitere");
 		moreButton.setSize("120px", "60px");
 		wrapperFlexTable.setWidget(wrapperFlexTable.getRowCount() - 1, 2, moreButton);
@@ -425,10 +427,19 @@ public class AkkuVita implements EntryPoint {
 		VerticalPanel moreEvents = new VerticalPanel();
 		FlexTable events = new FlexTable();
 		Button detailsButton = new Button("Details");
-		Button addEventButten = new Button("Neues Event");
+		Button addEventButton = new Button("Neues Event");
 		HorizontalPanel buttons = new HorizontalPanel();
 		buttons.add(detailsButton);
-		buttons.add(addEventButten);
+		buttons.add(addEventButton);
+		
+		addEventButton.addClickHandler(new ClickHandler() {
+
+			@Override
+			public void onClick(ClickEvent event) {
+				newEvent();
+			}
+			
+		});
 
 		moreButton.addClickHandler(new AkkuVitaRowClickHandler(counter) {
 
