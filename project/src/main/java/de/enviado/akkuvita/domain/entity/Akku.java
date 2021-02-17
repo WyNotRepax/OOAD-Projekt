@@ -65,7 +65,6 @@ public class Akku implements Serializable {
 
     /**
      * The RequestFactory requires a static finder method for each proxied type.
-     * Soon it should allow you to customize how instances are found.
      */
     public static Akku findAkku(String id) {
         Logger logger = Logger.getLogger("FINDAKKU");
