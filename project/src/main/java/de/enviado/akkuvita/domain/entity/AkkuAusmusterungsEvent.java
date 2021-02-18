@@ -6,6 +6,8 @@ import org.hibernate.Session;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Entity
 public class AkkuAusmusterungsEvent extends AkkuEvent{
@@ -25,7 +27,6 @@ public class AkkuAusmusterungsEvent extends AkkuEvent{
         super.copyFrom(copyFrom);
         this.notiz = notiz;
     }
-
     public String getNotiz() {
         return notiz;
     }
@@ -34,7 +35,7 @@ public class AkkuAusmusterungsEvent extends AkkuEvent{
         this.notiz = notiz;
     }
 
-    public static AkkuEvent findReperaturEingangsEvent(Long id){
+    public static AkkuEvent findAkkuAusmusterungsEvent(Long id){
         try(Session session = HibernateUtil.getSessionFactory().openSession()){
             session.beginTransaction();
             AkkuEvent akkuEvent = session.find(AkkuAusmusterungsEvent.class,id);

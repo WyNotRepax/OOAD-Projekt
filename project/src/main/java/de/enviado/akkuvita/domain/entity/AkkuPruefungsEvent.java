@@ -86,7 +86,6 @@ public class AkkuPruefungsEvent extends AkkuEvent {
     }
 
     public void setKunde(Kunde kunde) {
-        kunde.addAkkuPruefungsEvent(this);
         this.kunde = kunde;
     }
 

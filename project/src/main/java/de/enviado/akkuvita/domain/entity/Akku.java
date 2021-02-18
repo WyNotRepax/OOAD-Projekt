@@ -5,15 +5,14 @@ import com.google.gwt.dev.util.Pair;
 import de.enviado.akkuvita.server.HibernateUtil;
 import de.enviado.akkuvita.shared.AkkuDefekt;
 import org.hibernate.Session;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -28,7 +27,7 @@ public class Akku implements Serializable {
     @NotNull
     @DecimalMin("0")
     @Column(name = "VERSION")
-    private Integer version = 0;
+    private Integer version = 1;
 
     @Column(name = "PRODUCTION_DATE")
     private Date produktionsdatum;
@@ -37,16 +36,12 @@ public class Akku implements Serializable {
     @Column(name = "REPAIR_COUNT")
     @DecimalMin("0")
     @NotNull
+    @Fetch(FetchMode.JOIN)
     private Integer reperaturanzahl;
 
-    @NotNull
-    @OneToMany
-    @JoinColumn(name="SERIAL")
-    private Set<AkkuEvent> events;
 
     public Akku() {
         this.reperaturanzahl = 0;
-        this.events = new HashSet<>();
     }
 
     protected Akku(Akku copyFrom) {
@@ -59,7 +54,6 @@ public class Akku implements Serializable {
         this.version = copyFrom.version;
         this.produktionsdatum = copyFrom.produktionsdatum;
         this.reperaturanzahl = copyFrom.reperaturanzahl;
-        this.events = copyFrom.events;
     }
 
 
@@ -67,17 +61,18 @@ public class Akku implements Serializable {
      * The RequestFactory requires a static finder method for each proxied type.
      */
     public static Akku findAkku(String id) {
-        Logger logger = Logger.getLogger("FINDAKKU");
+        //Logger logger = Logger.getLogger("FINDAKKU");
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             session.beginTransaction();
             Akku akku = session.load(Akku.class, id);
             session.getTransaction().commit();
-            logger.log(Level.INFO, "findAkku called with id "+ id +" returning " + akku.toString());
+            //logger.log(Level.INFO, "findAkku called with id "+ id +" returning " + akku.toString());
             return akku;
         }
     }
 
     public void persist() {
+        Logger.getLogger("perist").info("persist called on " + this.toString());
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             session.beginTransaction();
             session.saveOrUpdate(this);
@@ -121,26 +116,12 @@ public class Akku implements Serializable {
         this.reperaturanzahl = reperaturanzahl;
     }
 
-    public void addEvent(AkkuEvent event) {
-        events.add(event);
-    }
-
-    public Set<AkkuEvent> getEvents() {
-        return events;
-    }
-
-    public AkkuEvent getMostRecentEvent(){
-        return events.stream().min(Comparator.comparing(AkkuEvent::getDate)).orElse(null);
-    }
-
     /**
      * Required by {@link de.enviado.akkuvita.shared.AkkuVitaRequestFactory}
      * Delegates via {@link Akku#getSeriennummer()} }
      * @return {@link Akku#seriennummer}
      */
     public String getId() {
-        Logger logger = Logger.getLogger("GETID");
-        logger.log(Level.INFO,"getId called on " + this.toString());
         return this.getSeriennummer();
     }
 
@@ -150,5 +131,41 @@ public class Akku implements Serializable {
      */
     public void setId(String id) {
         this.setSeriennummer(id);
+    }
+
+    public static List<Akku> findAllAkkus(){
+
+        //Logger logger = Logger.getLogger("FINDAKKU");
+        //logger.log(Level.INFO,"findAllAkkus called");
+        String hql = "from Akku a order by a.seriennummer";
+        try(Session session = HibernateUtil.getSessionFactory().openSession()){
+            session.beginTransaction();
+            Query query = session.createQuery(hql,Akku.class);
+            @SuppressWarnings("Unchecked")
+            List<Akku> result = (List<Akku>)query.getResultList();
+            session.getTransaction().commit();
+            //logger.log(Level.INFO,"findAllAkkus returned " + result.size() + " Objects");
+            return result;
+        }
+    }
+
+    public static Integer sieben(){
+        return 7;
+    }
+
+    public static List<Akku> findAkkus(int start, int length){
+
+
+        String hql = "from Akku a order by a.seriennummer";
+        try(Session session = HibernateUtil.getSessionFactory().openSession()){
+            session.beginTransaction();
+            Query query = session.createQuery(hql,Akku.class);
+            query.setFirstResult(start);
+            query.setMaxResults(length);
+            @SuppressWarnings("Unchecked")
+            List<Akku> result = (List<Akku>)query.getResultList();
+            session.getTransaction().commit();
+            return result;
+        }
     }
 }

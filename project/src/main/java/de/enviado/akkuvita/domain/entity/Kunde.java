@@ -3,13 +3,11 @@ package de.enviado.akkuvita.domain.entity;
 import de.enviado.akkuvita.server.HibernateUtil;
 import org.hibernate.Session;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,17 +25,13 @@ public class Kunde {
     @Column(name = "ORGANISATION")
     private String firma;
 
-    @OneToMany
-    @NotNull
-    private Set<AkkuPruefungsEvent> events;
-
     @NotNull
     @DecimalMin("0")
     @Column(name = "VERSION")
     private Integer version = 0;
 
     public Kunde(){
-        events = new HashSet<>();
+
     }
 
     public Kunde(Kunde copyFrom){
@@ -49,7 +43,6 @@ public class Kunde {
         this.kundennummer = copyFrom.kundennummer;
         this.name = copyFrom.name;
         this.firma = copyFrom.firma;
-        this.events = copyFrom.events;
         this.version = copyFrom.version;
     }
 
@@ -115,13 +108,40 @@ public class Kunde {
     public static Kunde findKunde(Integer id){
         try(Session session = HibernateUtil.getSessionFactory().openSession()){
             session.beginTransaction();
-            Kunde kunde = session.find(Kunde.class,id);
+            Kunde kunde = session.load(Kunde.class,id);
             session.getTransaction().commit();
             return kunde;
         }
     }
 
-    public void addAkkuPruefungsEvent(AkkuPruefungsEvent akkuPruefungsEvent){
-        this.events.add(akkuPruefungsEvent);
+
+    public static List<Kunde> findKunden(int start, int length){
+        String hql = "from Kunde a order by a.kundennummer";
+        try(Session session = HibernateUtil.getSessionFactory().openSession()){
+            session.beginTransaction();
+            Query query = session.createQuery(hql,Kunde.class);
+            query.setFirstResult(start);
+            query.setMaxResults(length);
+            @SuppressWarnings("Unchecked")
+            List<Kunde> result = (List<Kunde>)query.getResultList();
+            session.getTransaction().commit();
+            return result;
+        }
+    }
+
+    public static List<Kunde> findAllKunden(){
+        String hql = "from Kunde kunde order by kunde.kundennummer";
+        try(Session session = HibernateUtil.getSessionFactory().openSession()){
+            session.beginTransaction();
+            Query query = session.createQuery(hql,Kunde.class);
+            @SuppressWarnings("Unchecked")
+            List<Kunde> result = (List<Kunde>)query.getResultList();
+            session.getTransaction().commit();
+            return result;
+        }
+    }
+
+    public static Integer sieben(){
+        return 7;
     }
 }

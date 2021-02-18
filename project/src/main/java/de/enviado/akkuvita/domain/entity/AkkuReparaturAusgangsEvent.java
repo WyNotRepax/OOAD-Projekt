@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 
 @Entity
 public class AkkuReparaturAusgangsEvent extends AkkuEvent{
+
     @Column(name = "NOTE")
     private String notiz;
 

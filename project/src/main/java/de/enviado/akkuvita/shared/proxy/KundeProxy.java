@@ -6,5 +6,12 @@ import de.enviado.akkuvita.domain.entity.Kunde;
 
 @ProxyFor(Kunde.class)
 public interface KundeProxy extends EntityProxy {
+    Integer getKundennummer();
     void setKundennummer(Integer kundennummer);
+
+    String getName();
+    void setName(String name);
+
+    String getFirma();
+    void setFirma(String firma);
 }

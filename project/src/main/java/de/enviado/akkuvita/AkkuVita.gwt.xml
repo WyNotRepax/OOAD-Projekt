@@ -20,7 +20,12 @@
   <inherits name='com.google.gwt.editor.Editor' />
   <inherits name='com.google.gwt.logging.Logging'/>
   <inherits name='com.google.web.bindery.requestfactory.RequestFactory' />
+  <inherits name='com.google.gwt.user.theme.clean.Clean'/>
 
+  <inherits name="com.google.gwt.i18n.I18N"/>
+  <extend-property name="locale" values="de" /> <!-- 1. full list of supported locales -->
+  <set-property name="locale" value="de" />     <!-- 2. remove the 'default' locale permutation -->
+  <set-property-fallback name="locale" value="de" />
   <!-- Uncomment if you are enabling server-side deobfuscation of StackTraces
   <set-property name="compiler.stackMode" value="emulated" />
   <set-configuration-property name="compiler.emulatedStack.recordLineNumbers" value="true" />
